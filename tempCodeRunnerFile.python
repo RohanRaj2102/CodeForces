@@ -1,0 +1,12 @@
+nums = []
+for i in range(4):
+    n = int(input("Enter number: "))
+    nums.append(n)
+print("Sum =", sum(nums))
+# Input:
+# 5
+# 10
+# 15
+# 20
+# Output:
+# Sum = 50

@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fastio() ios::sync_with_stdio(false); cin.tie(NULL);
+
+typedef long long ll;
+typedef vector<int> vi;
+#define hi cout<<"hi" 
+#define ho cout<<"ho" 
+#define he cout<<"he" 
+#define nl cout<<endl
+#define pb push_back
+#define ite(i,a,b) for (int i = a; i < b; i++)
+
+int main(){
+    fastio()
+    int t;
+    cin>> t;
+    while(t--){
+        int n;
+        cin>> n;
+        int arr[n];
+        int sum=0;
+        int extra=0;
+        bool flag=0;
+        for(int i=0;i<n;i++){
+            cin>> arr[i];
+        }
+        for(int i=0;i<n;i++){
+            sum=sum+arr[i];
+            if(arr[i]>i+1){
+                extra=extra + arr[i]-(i+1);
+            }
+            if(arr[i]<i+1){
+                int diff=i+1 -arr[i];
+                if(extra>=diff){
+                    extra=extra-diff;
+                }
+                else{
+                    cout<< "NO";
+                    flag=1;
+                    break;
+                }
+            }
+        }
+        if(flag==0){
+            cout<< "YES";
+        }
+        nl;
+    }
+    return 0;
+}
