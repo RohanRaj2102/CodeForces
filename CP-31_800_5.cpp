@@ -14,8 +14,21 @@ typedef vector<int> vi;
 
 int main(){
     fastio()
-    
-
-
+    int t;
+    cin>> t;
+    while(t--){
+        int n;
+        cin>> n;
+        int arr[n];
+        for(int i=0;i<n;i++){
+            cin>> arr[i];
+        }
+        if(arr[0]!=1){
+            cout<< "NO";
+        }else{
+            cout<< "YES";
+        }
+        nl;
+    }
     return 0;
 }
